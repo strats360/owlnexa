@@ -132,8 +132,8 @@ export function HomePage() {
               ))}
               <div className="h-6 w-px bg-white/10 mx-2" />
               <ThemeToggle className="relative top-0 right-0" />
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 className="bg-white text-slate-950 hover:bg-slate-200 hover:scale-105 active:scale-95 transition-all font-semibold px-6 rounded-full"
               >
                 Get Started
@@ -184,21 +184,21 @@ export function HomePage() {
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-mesh">
           {/* Animated Background Orbs */}
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               scale: [1, 1.2, 1],
               opacity: [0.15, 0.25, 0.15]
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none" 
+            className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"
           />
-          <motion.div 
-             animate={{ 
+          <motion.div
+             animate={{
               scale: [1.2, 1, 1.2],
               opacity: [0.1, 0.2, 0.1]
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] pointer-events-none" 
+            className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] pointer-events-none"
           />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <motion.div
@@ -221,16 +221,16 @@ export function HomePage() {
                 Empower your enterprise with autonomous decision systems.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="h-14 px-10 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-lg shadow-glow hover:scale-105 active:scale-95 transition-all group"
                 >
-                  Request a Demo 
+                  Request a Demo
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="h-14 px-10 border-white/10 text-white rounded-full text-lg hover:bg-white/5 hover:border-white/20 transition-all"
                 >
                   Our Solutions
@@ -388,7 +388,7 @@ export function HomePage() {
         {/* Contact CTA */}
         <section className="py-24 md:py-40 relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -416,11 +416,11 @@ export function HomePage() {
                   <label className="text-sm font-semibold text-slate-300 ml-1">Project Goal</label>
                   <Textarea placeholder="Tell us how we can help you scale..." className="bg-slate-950/50 border-white/10 text-white min-h-[140px] rounded-xl focus:ring-indigo-500/50 focus:border-indigo-500 transition-all resize-none" required />
                 </div>
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full h-16 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white rounded-2xl text-xl font-bold group shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  Send Message 
+                  Send Message
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
                 </Button>
               </form>
@@ -433,16 +433,16 @@ export function HomePage() {
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-white/5 pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
+            <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg">
                   <Bird className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-bold text-white tracking-tight">Owlnexa</span>
               </div>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                Headquartered in Bangalore, India.
+              <p className="text-slate-400 text-lg leading-relaxed max-w-sm">
+                Headquartered in Ahmedabad, India.
                 Pioneering intelligence for the next generation of global digital infrastructure.
               </p>
               <div className="flex gap-6">
@@ -451,7 +451,7 @@ export function HomePage() {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="flex flex-col items-center md:items-start text-center md:text-left">
               <h6 className="text-white font-bold text-lg mb-8">Solutions</h6>
               <ul className="space-y-4 text-slate-400 text-base">
                 {['Enterprise Platform', 'API & SDKs', 'Infrastructure', 'AI Security'].map(item => (
@@ -459,7 +459,7 @@ export function HomePage() {
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="flex flex-col items-center md:items-start text-center md:text-left">
               <h6 className="text-white font-bold text-lg mb-8">Company</h6>
               <ul className="space-y-4 text-slate-400 text-base">
                 {['About Us', 'Careers', 'Tech Stack', 'Contact'].map(item => (
@@ -467,12 +467,12 @@ export function HomePage() {
                 ))}
               </ul>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
               <h6 className="text-white font-bold text-lg mb-8">Stay Informed</h6>
-              <p className="text-slate-400 text-base">Get the latest AI breakthroughs directly from the Owlnexa labs.</p>
-              <div className="flex gap-2">
-                <Input placeholder="Email Address" className="bg-white/5 border-white/10 h-12 rounded-xl" />
-                <Button size="icon" className="h-12 w-12 bg-indigo-600 hover:bg-indigo-500 rounded-xl">
+              <p className="text-slate-400 text-base max-w-xs">Get the latest AI breakthroughs directly from the Owlnexa labs.</p>
+              <div className="flex gap-2 w-full max-w-sm">
+                <Input placeholder="Email Address" className="bg-white/5 border-white/10 h-12 rounded-xl flex-grow" />
+                <Button size="icon" className="h-12 w-12 bg-indigo-600 hover:bg-indigo-500 rounded-xl flex-shrink-0">
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
@@ -480,7 +480,8 @@ export function HomePage() {
           </div>
           <div className="pt-12 border-t border-white/5 text-center">
             <p className="text-slate-500 text-sm tracking-wide">
-              © {new Date().getFullYear()} Owlnexa Intelligence Pvt. Ltd. <span className="mx-2">|</span> 
+              © {new Date().getFullYear()} Owlnexa Intelligence Pvt. Ltd. <span className="mx-2 hidden sm:inline">|</span>
+              <br className="sm:hidden" />
               Built with precision for the global AI landscape.
             </p>
           </div>
