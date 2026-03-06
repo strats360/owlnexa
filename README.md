@@ -1,6 +1,6 @@
 # Lumina Intelligence
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/strats360/lumina-intelligence-ai-solutions-landing-page)
 
 ## Introduction
 
@@ -139,7 +139,7 @@ Deploy to Cloudflare Pages & Workers with a single command:
 
 Your app will be live at `<project-name>.workers.dev` with automatic asset handling.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/strats360/lumina-intelligence-ai-solutions-landing-page)
 
 **Configure Custom Domain**: Update `wrangler.jsonc` with your `routes` and run `wrangler deploy`.
 
