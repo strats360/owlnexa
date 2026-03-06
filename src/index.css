@@ -23,12 +23,29 @@
 }
 @layer components {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-400 to-cyan-400 font-bold;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-indigo-300 to-cyan-300 font-extrabold;
+    text-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
   }
   .glass-card {
     @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
   }
   .nav-blur {
-    @apply sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/70 backdrop-blur-lg;
+    @apply sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl;
+  }
+  .shadow-owl {
+    box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.5);
+  }
+}
+@layer utilities {
+  .animate-pulse-subtle {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
   }
 }

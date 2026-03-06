@@ -1,6 +1,5 @@
-/* This is a demo sidebar. **COMPULSORY** Edit this file to customize the sidebar OR remove it from appLayout OR don't use appLayout at all */
 import React from "react";
-import { Home, Layers, Compass, Star, Settings, LifeBuoy } from "lucide-react";
+import { Home, Layers, Compass, Star, Bird } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -16,28 +15,31 @@ import {
   SidebarMenuAction,
   SidebarMenuBadge,
 } from "@/components/ui/sidebar";
-
 export function AppSidebar(): JSX.Element {
   return (
-    <Sidebar>
-      <SidebarHeader>
-        <div className="flex items-center gap-2 px-2 py-1">
-          <div className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 to-purple-500" />
-          <span className="text-sm font-medium">Demo Sidebar</span>
+    <Sidebar className="border-r border-white/10">
+      <SidebarHeader className="p-4">
+        <div className="flex items-center gap-3 px-2 py-1">
+          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center shadow-glow">
+            <Bird className="h-5 w-5 text-white" />
+          </div>
+          <span className="text-base font-bold text-white tracking-tight">Owlnexa <span className="text-indigo-400 text-xs">Console</span></span>
         </div>
-        <SidebarInput placeholder="Search" />
+        <div className="mt-4 px-2">
+          <SidebarInput placeholder="Search intelligence..." className="bg-slate-900 border-white/10" />
+        </div>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton asChild isActive>
-                <a href="#"><Home /> <span>Home</span></a>
+                <a href="#"><Home /> <span>Dashboard</span></a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
-                <a href="#"><Layers /> <span>Projects</span></a>
+                <a href="#"><Layers /> <span>AI Models</span></a>
               </SidebarMenuButton>
               <SidebarMenuAction>
                 <Star className="size-4" />
@@ -45,28 +47,28 @@ export function AppSidebar(): JSX.Element {
             </SidebarMenuItem>
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
-                <a href="#"><Compass /> <span>Explore</span></a>
+                <a href="#"><Compass /> <span>Analytics</span></a>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroup>
-
-        <SidebarSeparator />
-
+        <SidebarSeparator className="bg-white/5" />
         <SidebarGroup>
-          <SidebarGroupLabel>Quick Links</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-slate-500 font-bold uppercase text-[10px] tracking-widest px-4">Resources</SidebarGroupLabel>
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
-                <a href="#"><Star /> <span>Starred</span></a>
+                <a href="#"><Star /> <span>Deployments</span></a>
               </SidebarMenuButton>
-              <SidebarMenuBadge>5</SidebarMenuBadge>
+              <SidebarMenuBadge className="bg-indigo-500/20 text-indigo-400 border-none">12</SidebarMenuBadge>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <div className="px-2 text-xs text-muted-foreground">A simple shadcn sidebar</div>
+      <SidebarFooter className="p-4 border-t border-white/5 bg-slate-950/50">
+        <div className="px-2 text-[10px] text-slate-500 uppercase font-bold tracking-tighter">
+          Owlnexa Intelligence System
+        </div>
       </SidebarFooter>
     </Sidebar>
   );
