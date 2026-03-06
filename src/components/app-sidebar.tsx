@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Layers, Compass, Star, Owl } from "lucide-react";
+import { Home, Layers, Compass, Star, Brain } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -21,7 +21,7 @@ export function AppSidebar(): JSX.Element {
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3 px-2 py-1">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center shadow-glow">
-            <Owl className="h-5 w-5 text-white" />
+            <Brain className="h-5 w-5 text-white" />
           </div>
           <span className="text-base font-bold text-white tracking-tight">Owlnexa <span className="text-indigo-400 text-xs">Console</span></span>
         </div>

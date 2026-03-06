@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import {
   Cpu,
-  Owl,
+  Brain,
   Database,
   ChevronRight,
   Layers,
@@ -112,7 +112,7 @@ export function HomePage() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-2 group cursor-pointer">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center shadow-glow transition-transform group-hover:scale-110">
-                <Owl className="w-6 h-6 text-white" />
+                <Brain className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
                 Owl<span className="text-indigo-400">nexa</span>
@@ -335,7 +335,7 @@ export function HomePage() {
                   <div className="aspect-video bg-slate-900/80 flex items-center justify-center p-8">
                      <div className="w-full text-center space-y-8">
                         <div className="relative flex justify-center">
-                          <Owl className="w-24 h-24 text-indigo-500 animate-pulse" />
+                          <Brain className="w-24 h-24 text-indigo-500 animate-pulse" />
                           <div className="absolute inset-0 bg-indigo-500/20 blur-3xl rounded-full" />
                         </div>
                         <div className="space-y-4 max-w-xs mx-auto">
@@ -402,7 +402,7 @@ export function HomePage() {
               className="glass-card p-10 md:p-20 rounded-[3rem] border-indigo-500/20 shadow-glow overflow-hidden relative"
             >
               <div className="absolute top-0 right-0 p-12 opacity-10">
-                <Owl className="w-64 h-64 -rotate-12" />
+                <Brain className="w-64 h-64 -rotate-12" />
               </div>
               <div className="text-center mb-16 relative z-10">
                 <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Start Your AI Journey</h2>
@@ -443,7 +443,7 @@ export function HomePage() {
             <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg">
-                  <Owl className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-bold text-white tracking-tight">Owlnexa</span>
               </div>
