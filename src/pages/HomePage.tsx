@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import {
   Cpu,
-  Bird,
+  Owl,
   Database,
   ChevronRight,
   Layers,
@@ -32,21 +32,21 @@ const services = [
     description: "State-of-the-art Natural Language Processing for sentiment analysis, chatbots, and semantic search.",
     icon: Sparkles,
     color: "from-blue-500 to-cyan-400",
-    glowColor: "hover:shadow-blue-500/20"
+    glowColor: "hover:shadow-blue-500/40"
   },
   {
     title: "Computer Vision",
     description: "Advanced image recognition and video analytics systems tailored for retail, healthcare, and security.",
     icon: Cpu,
     color: "from-purple-500 to-indigo-400",
-    glowColor: "hover:shadow-indigo-500/20"
+    glowColor: "hover:shadow-indigo-500/40"
   },
   {
     title: "Predictive Analytics",
     description: "Leverage historical data to forecast trends and optimize business operations with precision.",
     icon: Database,
     color: "from-emerald-500 to-teal-400",
-    glowColor: "hover:shadow-emerald-500/20"
+    glowColor: "hover:shadow-emerald-500/40"
   }
 ];
 const benefits = [
@@ -112,7 +112,7 @@ export function HomePage() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-2 group cursor-pointer">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center shadow-glow transition-transform group-hover:scale-110">
-                <Bird className="w-6 h-6 text-white" />
+                <Owl className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
                 Owl<span className="text-indigo-400">nexa</span>
@@ -133,10 +133,11 @@ export function HomePage() {
               <div className="h-6 w-px bg-white/10 mx-2" />
               <ThemeToggle className="relative top-0 right-0" />
               <Button
+                asChild
                 size="sm"
                 className="bg-white text-slate-950 hover:bg-slate-200 hover:scale-105 active:scale-95 transition-all font-semibold px-6 rounded-full"
               >
-                Get Started
+                <a href="#contact">Get Started</a>
               </Button>
             </nav>
             {/* Mobile Nav Toggle */}
@@ -172,8 +173,12 @@ export function HomePage() {
                     {item}
                   </a>
                 ))}
-                <Button className="w-full bg-indigo-600 text-white mt-4 h-12 text-lg rounded-xl">
-                  Contact Us
+                <Button 
+                  asChild
+                  className="w-full bg-indigo-600 text-white mt-4 h-12 text-lg rounded-xl"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <a href="#contact">Contact Us</a>
                 </Button>
               </div>
             </motion.div>
@@ -183,7 +188,6 @@ export function HomePage() {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-mesh">
-          {/* Animated Background Orbs */}
           <motion.div
             animate={{
               scale: [1, 1.2, 1],
@@ -222,18 +226,22 @@ export function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Button
+                  asChild
                   size="lg"
                   className="h-14 px-10 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full text-lg shadow-glow hover:scale-105 active:scale-95 transition-all group"
                 >
-                  Request a Demo
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <a href="#contact">
+                    Request a Demo
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
                 <Button
+                  asChild
                   variant="outline"
                   size="lg"
                   className="h-14 px-10 border-white/10 text-white rounded-full text-lg hover:bg-white/5 hover:border-white/20 transition-all"
                 >
-                  Our Solutions
+                  <a href="#services">Our Solutions</a>
                 </Button>
               </div>
             </motion.div>
@@ -259,7 +267,7 @@ export function HomePage() {
                 >
                   <Card className={cn(
                     "glass-card h-full border-none group cursor-default p-2",
-                    "hover:translate-y-[-12px] hover:bg-white/[0.08] hover:shadow-glow",
+                    "hover:translate-y-[-12px] hover:bg-white/[0.08] hover:shadow-2xl",
                     service.glowColor
                   )}>
                     <CardHeader className="pb-4">
@@ -327,7 +335,7 @@ export function HomePage() {
                   <div className="aspect-video bg-slate-900/80 flex items-center justify-center p-8">
                      <div className="w-full text-center space-y-8">
                         <div className="relative flex justify-center">
-                          <Bird className="w-24 h-24 text-indigo-500 animate-pulse" />
+                          <Owl className="w-24 h-24 text-indigo-500 animate-pulse" />
                           <div className="absolute inset-0 bg-indigo-500/20 blur-3xl rounded-full" />
                         </div>
                         <div className="space-y-4 max-w-xs mx-auto">
@@ -345,7 +353,6 @@ export function HomePage() {
                      </div>
                   </div>
                 </div>
-                {/* Decorative Elements */}
                 <div className="absolute -top-12 -right-12 w-48 h-48 bg-indigo-500/10 rounded-full blur-[80px]" />
                 <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-[80px]" />
               </motion.div>
@@ -386,7 +393,7 @@ export function HomePage() {
           </div>
         </section>
         {/* Contact CTA */}
-        <section className="py-24 md:py-40 relative overflow-hidden">
+        <section id="contact" className="py-24 md:py-40 relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -395,7 +402,7 @@ export function HomePage() {
               className="glass-card p-10 md:p-20 rounded-[3rem] border-indigo-500/20 shadow-glow overflow-hidden relative"
             >
               <div className="absolute top-0 right-0 p-12 opacity-10">
-                <Bird className="w-64 h-64 -rotate-12" />
+                <Owl className="w-64 h-64 -rotate-12" />
               </div>
               <div className="text-center mb-16 relative z-10">
                 <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Start Your AI Journey</h2>
@@ -426,7 +433,6 @@ export function HomePage() {
               </form>
             </motion.div>
           </div>
-          {/* Animated Background Mesh */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(79,70,229,0.2),transparent_60%)] pointer-events-none" />
         </section>
       </main>
@@ -437,7 +443,7 @@ export function HomePage() {
             <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg">
-                  <Bird className="w-6 h-6 text-white" />
+                  <Owl className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-bold text-white tracking-tight">Owlnexa</span>
               </div>
